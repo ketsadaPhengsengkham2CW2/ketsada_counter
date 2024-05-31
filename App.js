@@ -7,9 +7,9 @@ const App = () => {
     const [counter, setCounter] = useState(0); 
     const [initialCount, setInitialCount] = useState(0); 
   
-    const handleInitialCountChange = (value) => { 
+    /* const handleInitialCountChange = (value) => { 
         setInitialCount(Number(value)); 
-    }; 
+    }; */
   
     const handleReset = () => { 
         setCounter(initialCount); 
@@ -25,6 +25,9 @@ const App = () => {
   
     return ( 
         <View style={styles.container}> 
+            <Text style={styles.name}> 
+                Mr. Ketsada Phengsengkham 2cw2.
+            </Text> 
             <Text style={styles.heading}> 
                 counter Value
             </Text> 
@@ -43,15 +46,15 @@ const App = () => {
                 </TouchableOpacity> 
             </View> 
             <View style={{ margin: 15 }}> 
-                <TextInput 
-                    keyboardType="numeric"
+               <TextInput 
+                   /* keyboardType="numeric"
                     value={initialCount.toString()} 
                     onChangeText={handleInitialCountChange} 
                     style={{ padding: 10,  
                              fontSize: 16,  
                              borderRadius: 8,  
                              borderColor: 'black',  
-                             borderWidth: 1 }} 
+                             borderWidth: 1 }} */
                 /> 
                 <TouchableOpacity 
                     onPress={handleReset} 
@@ -79,14 +82,21 @@ const styles = StyleSheet.create({
         color: "#333", 
         textTransform: "uppercase", 
     }, 
+    name: { 
+        color: "#393cf7", 
+        fontSize: 23, 
+        fontWeight: "bold", 
+        
+    }, 
     heading: { 
         color: "green", 
-        fontSize: 35, 
+        fontSize: 50, 
+        fontWeight: "bold", 
     }, 
     counterValue: { 
         fontSize: 36, 
         fontWeight: "bold", 
-        marginVertical: 10, 
+        marginVertical: 15, 
         color: "yellow", 
     }, 
     buttons: { 
@@ -96,9 +106,9 @@ const styles = StyleSheet.create({
     button: { 
         fontSize: 16, 
         padding: 13, 
-        margin: 5, 
+        margin: 7, 
         borderRadius: 8, 
-        backgroundColor: "red", 
+        backgroundColor: "#fa4655", 
         elevation: 20, 
     }, 
     setInitialCountButton: { 
@@ -106,7 +116,7 @@ const styles = StyleSheet.create({
         fontSize: 16, 
         margin: 15, 
         borderRadius: 8, 
-        backgroundColor: "pink", 
+        backgroundColor: "#f53bbd", 
         elevation: 20, 
     }, 
 }); 
